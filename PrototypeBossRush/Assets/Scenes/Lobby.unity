@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74a4bcb77469c549a49d3f7add0105b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSide: {fileID: 11400000, guid: e3d91cca4fe8a5b4f84b54204763b807, type: 2}
   dice: {fileID: 635039280}
 --- !u!1 &107766892
 GameObject:
@@ -508,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 238547209}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5647154, y: -3.0606964, z: 4.09}
+  m_LocalPosition: {x: 2.5647154, y: -3.0606964, z: 2.64}
   m_LocalScale: {x: 10, y: 10, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -603,19 +604,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5709914372698637505, guid: 8282bef7964b3ba499489cdabdb26ad9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 9.09
       objectReference: {fileID: 0}
     - target: {fileID: 5709914372698637505, guid: 8282bef7964b3ba499489cdabdb26ad9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.3
+      value: -2.44
       objectReference: {fileID: 0}
     - target: {fileID: 5709914372698637505, guid: 8282bef7964b3ba499489cdabdb26ad9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5709914372698637505, guid: 8282bef7964b3ba499489cdabdb26ad9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.38268343
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5709914372698637505, guid: 8282bef7964b3ba499489cdabdb26ad9, type: 3}
       propertyPath: m_LocalRotation.y
@@ -627,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5709914372698637505, guid: 8282bef7964b3ba499489cdabdb26ad9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 45
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5709914372698637505, guid: 8282bef7964b3ba499489cdabdb26ad9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -818,13 +819,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5fc88552bdd910469a92064004af039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSide: {fileID: 11400000, guid: e3d91cca4fe8a5b4f84b54204763b807, type: 2}
   isRollable: 1
-  maxRandomForceValue: 500
-  startRollingForce: 300
+  maxRandomForceValue: 900
+  startRollingForce: 500
   forceX: 0
   forceY: 0
   forceZ: 0
-  diceFaceNum: 0
 --- !u!54 &635039281
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -882,7 +883,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5
-  m_Range: 30
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -920,7 +921,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -940,7 +941,7 @@ Transform:
   m_GameObject: {fileID: 873962327}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7477155, y: 0, z: 0.6541338}
+  m_LocalPosition: {x: 1.7477155, y: 0, z: 6.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1206,6 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3bf248b9fa5c04fb1932af9705acee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceSide: {fileID: 11400000, guid: e3d91cca4fe8a5b4f84b54204763b807, type: 2}
   sideText: {fileID: 1526805769}
 --- !u!1001 &1274999984
 PrefabInstance:
@@ -1437,7 +1439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1526805769
@@ -1487,8 +1489,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1503,7 +1505,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}

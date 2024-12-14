@@ -6,6 +6,7 @@ using UnityEngine;
 public class DiceScore : MonoBehaviour
 {
     private Dice dice;
+    public DiceSideSO diceSide;
 
     [SerializeField]
     private TextMeshProUGUI sideText;
@@ -16,9 +17,9 @@ public class DiceScore : MonoBehaviour
     }
     private void Update()
     {
-        if(dice != null && dice.diceFaceNum != 0 && dice.isRollable)
+        if(dice != null && diceSide.diceFaceNum != 0 && dice.isRollable)
         {
-            sideText.text = "Side: " + dice.diceFaceNum.ToString();
+            sideText.text = "Side: " + diceSide.diceFaceNum.ToString();
         }
     }
 }

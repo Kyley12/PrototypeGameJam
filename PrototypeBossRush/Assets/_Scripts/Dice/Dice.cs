@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Dice : MonoBehaviour
 {
+    public DiceSideSO diceSide;
     private Rigidbody body;
 
     public bool isRollable = true;
@@ -13,11 +14,11 @@ public class Dice : MonoBehaviour
 
     public float forceX, forceY, forceZ;
 
-    public int diceFaceNum;
-
     private void Awake()
     {
         Initialize();
+        diceSide.avalibleDiceChoice = 3;
+        diceSide.currentFacesGot.Clear();
     }
 
     public void OnButtonRoll()
@@ -39,6 +40,9 @@ public class Dice : MonoBehaviour
 
         body.AddForce(Vector3.up * startRollingForce);
         body.AddTorque(forceX, forceY, forceZ);
+
+        transform.position = new Vector3(0, 2.53f, 0);
+        transform.rotation = new Quaternion(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360), 0);
     }
 
     private void Initialize()
