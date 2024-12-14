@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Title : MonoBehaviour
+public class SceneHandler : MonoBehaviour
 {
     public void PlayGame()
     {

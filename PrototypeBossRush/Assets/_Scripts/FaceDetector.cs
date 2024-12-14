@@ -13,6 +13,7 @@ public class FaceDetector : MonoBehaviour
             if(dice.GetComponent<Rigidbody>().velocity == Vector3.zero)
             {
                 dice.diceFaceNum = int.Parse(other.name);
+                dice.isRollable = true;
             }
         }
     }

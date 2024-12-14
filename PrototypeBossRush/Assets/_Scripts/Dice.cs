@@ -7,6 +7,8 @@ public class Dice : MonoBehaviour
 {
     private Rigidbody body;
 
+    public bool isRollable = true;
+
     [SerializeField] private float maxRandomForceValue, startRollingForce;
 
     public float forceX, forceY, forceZ;
@@ -20,9 +22,10 @@ public class Dice : MonoBehaviour
 
     public void OnButtonRoll()
     {
-        if(body != null)
+        if(body != null && isRollable)
         {
             RollDice();
+            isRollable = false;
         }
     }
     
@@ -42,6 +45,7 @@ public class Dice : MonoBehaviour
     {
         body = GetComponent<Rigidbody>();
         body.isKinematic = true;
+        transform.rotation = new Quaternion(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360), 0);
     }
 
 }
