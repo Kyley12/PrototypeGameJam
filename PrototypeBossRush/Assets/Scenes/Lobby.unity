@@ -1206,7 +1206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3bf248b9fa5c04fb1932af9705acee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dice: {fileID: 635039280}
   sideText: {fileID: 1526805769}
 --- !u!1001 &1274999984
 PrefabInstance:
